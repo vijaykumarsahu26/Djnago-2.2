@@ -1,0 +1,27 @@
+﻿{%extends 'base.html'%}
+
+{%block content%}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body>
+    <form action="login" method='post'>
+        {% csrf_token %}
+        <input typr="text" name="username" placeholder="username"><br>
+        <input typr="pasword" name="password" placeholder="password"><br>
+        <input type="submit">
+    </form>
+    <div>
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+    {%endblock content%}
+
+
+</body>
+</html>

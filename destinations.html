@@ -1,0 +1,31 @@
+﻿{%extends 'base.html'%}
+
+{%block content%}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>destinations</title>
+</head>
+
+{% if user.is_authenticated %}
+
+
+<body>
+    <h4><a href="https://en.wikipedia.org/wiki/Hyderabad">clickhere</a> know abt hyd</h4>
+    {% else %}
+    <h4>You Have To Login 1st To Visit This Page</h4>
+    
+    <h4> <li>Clickhere To<a href="login"> Login</a></li></h4>
+
+
+        {% endif %}
+        {%endblock content%}
+
+
+
+</body>
+</html>
+
+
